@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    body {
+        
+    
+    
+    background-size: 100% 100%;
+    position: auto;
+    top:1.25cm;
+    left: 6cm;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url('static/back.jpg');
+    
+    vertical-align: center;
+    text-align: center;
+    padding: 1em 2em;;
+    border: 5px;
+    margin-top: 2cm;
+    
+    
+    
+    
+  }
+
+  .box
+  {
+    border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  }
+
+  
+</style>
+
+<body >
+    
+
+
+
+    <a href='front'><i style="font-size:60px;color:white; opacity: 75%;" class="fa fa-home"></i></a>
+
+
+
+    
+    
+
+    <div class="container" >
+        <h2 style="color: white; background-image: linear-gradient(rgb(163, 26, 26),rgb(255, 115, 0),rgb(201, 172, 43));
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 100px;
+        text-shadow: 2px 2px 4px">
+            <b>
+                Battery Prediction   result
+            </b>
+        </h2>
+    
+
+    
+        <form action="/result" method="post" style="margin-top: 1cm;">
+                    
+            <h3 style="color: white; font-size: 50px;">Battery Health -<b style="color: aquamarine;" > {{SOH}} %</b></h3>    
+            <h3 style="color: white; font-size: 50px;">Remaining useful cycles - <b style="color: aquamarine;">{{RUL}}</b></h3>
+        </form>           
+
+
+
+                               
+               
+                 
+    </div>
+    
+</body>

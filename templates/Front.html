@@ -1,0 +1,366 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<style>
+.tab .nav-tabs{
+    border-bottom:0 none;
+    margin-top: 20px;
+}
+.tab .nav-tabs li a {
+    font-size:14px;
+    color:#fff;
+    margin-right:0;
+    padding:10px 45px;
+    border-radius:0;
+    overflow: hidden;
+    background:#9a5379;
+    text-transform:capitalize;
+    box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+}
+.tab .nav-tabs li:first-child a{
+    border-top-left-radius:8px;
+}
+.tab .nav-tabs li:last-child a{
+    border-top-right-radius:8px;
+}
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a:hover,
+.tab .nav-tabs li.active a{
+    background:#545f60;
+    color:#fff;
+    margin-top: -19px;
+    padding:20px 45px;
+    border:1px solid #545f60;
+}
+.tab .tab-content{
+    color:#fff;
+    padding: 25px 20px;
+    background:#545f60;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (max-width: 650px){
+    .tab .nav-tabs li{ width:100%; }
+    .tab .nav-tabs li a{
+        margin:0;
+        padding:20px 45px;
+        box-shadow: -2px -1px 25px 2px rgba(0, 0, 0, 0.4);
+    }
+    .tab .nav-tabs li:first-child a,
+    .tab .nav-tabs li:last-child a{
+        border-radius: 0;
+    }
+    .tab .nav-tabs li a:hover,
+    .tab .nav-tabs li.active a:hover,
+    .tab .nav-tabs li.active a{
+        margin:0;
+    }
+}
+
+
+
+
+
+
+
+body {
+    
+    
+  background-size: 100% 100%;
+  position: auto;
+  top:1.25cm;
+  left: 6cm;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url('static/back.jpg');
+  
+}
+.accordion{
+  margin: 40px 0;
+}
+.accordion .item {
+    border: none;
+    margin-bottom: 50px;
+    background: none;
+}
+.t-p{
+  color: darkgrey;
+  padding: 40px 30px 0px 30px;
+}
+.accordion .item .item-header h2 button.btn.btn-link {
+    background: #333435;
+    color: white;
+    border-radius: 0px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.5;
+	border: none;
+	outline: none;
+    text-decoration: none;
+}
+.accordion .item .item-header {
+    border-bottom: none;
+    background: transparent;
+    padding: 0px;
+    margin: 2px;
+}
+
+.accordion .item .item-header h2 button {
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .item .item-header h2 i {
+    float: right;
+    font-size: 30px;
+    color: #eca300;
+    background-color: black;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+button.btn.btn-link.collapsed i {
+    transform: rotate(0deg);
+}
+
+button.btn.btn-link i {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+    
+<div class="container">
+    <h2 style="color: #fff;"> 
+        
+            Battery Estimator
+        
+        </h2>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab"><B>Home</B></a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab"><B>Estimator</B></a></li>
+                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab"><B>Info</B></a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+
+
+
+
+
+                        <h3 style="color:white;">NASA Battery Set</h3>
+                        <h4 style="color:rgb(73, 141, 204);">Description</h4> 
+                        <p style="opacity: 85%;">Experiments on Li-Ion batteries. Charging and discharging at different temperatures. Records the impedance as the damage criterion. The data set was provided by the Prognostics CoE at NASA Ames.</p>
+                        <h4 style="color:rgb(73, 141, 204);">Format</h4>
+                        <p style="opacity: 85%;">The set is in .mat format and has been zipped.</p>
+                        <h4 style="color:rgb(73, 141, 204);">Datasets</h4>
+                        <p style="opacity: 85%;"><li style="opacity: 85%;">+ Download Battery Data Set 1 (36645 downloads)</li><li style="opacity: 85%;">+ Download Battery Data Set 2 (17451 downloads)</li><li style="opacity: 85%;">+ Download Battery Data Set 3 (14287 downloads)</li><li style="opacity: 85%;">+ Download Battery Data Set 4 (11020 downloads)</li><li style="opacity: 85%;">+ Download Battery Data Set 5 (11769 downloads)</li><li style="opacity: 85%;">+ Download Battery Data Set 6 (12402 downloads)</li>
+                        </p>
+                        <h4 style="color:rgb(73, 141, 204);">Dataset Citation</h4>
+<p style="opacity: 85%;">	B. Saha and K. Goebel (2007). "Battery Data Set", NASA Ames Prognostics Data Repository (<a href="https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/">Dataset</a>), NASA Ames Research Center, Moffett Field, CA</p>
+    <div class="accordion" id="accordionExample">
+      <div class="item">
+         <div class="item-header" id="headingOne">
+            <h2 class="mb-0">
+           <button class="btn btn-link" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #eca300;">
+
+           Data Description
+           <i class="fa fa-angle-down"></i>
+           </button>
+        </h2>
+         </div>
+         <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+            data-parent="#accordionExample">
+            <div class="t-p">
+                A set of four Li-ion batteries (# 45 - 48) were run through 3 different operational profiles (charge, discharge and impedance) at an ambient temperature of 4 deg C. 
+Charging was carried out in a constant current (CC) mode at 1.5A until the battery voltage reached 4.2V and then continued in a constant voltage (CV) mode until the charge current dropped to 20mA. 
+"Fixed load current level of 1A" was used and the discharge runs were stopped at 2V, 2.2V, 2.5V and 2.7V for batteries 45, 46, 47 and 48.
+
+            </div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="item-header" id="headingTwo">
+            <h2 class="mb-0">
+               <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #eca300;">
+               File
+               <i class="fa fa-angle-down"></i>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+            data-parent="#accordionExample">
+            <div class="t-p">
+                B0047.mat	Data for Battery #47
+            </div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="item-header" id="headingThree">
+            <h2 class="mb-0">
+               <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree" style="color: #eca300;">
+               Datastructure
+               <i class="fa fa-angle-down"></i>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+            data-parent="#accordionExample">
+            <div class="t-p">
+                <li>
+                    cycle-	top level structure array containing the charge, discharge and impedance operations
+                </li>
+                <li>
+                    type: 	operation  type, can be charge, discharge or impedance
+                </li>
+                <li>
+                    ambient_temperature:	ambient temperature (degree C)
+                </li>
+                <li>
+                    time: 	the date and time of the start of the cycle, in MATLAB  date vector format
+                </li>
+                <li>
+                    data:	data structure containing the measurements
+                </li>
+            </div>
+         </div>
+      </div>
+     
+    </div>
+  
+
+
+
+
+
+
+                       
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        
+						<h3><b>Battery Features</b></h3>
+                    <hr />
+                    <form action="{{url_for('result')}}" method='POST'>
+                            <div class="form-group">
+                              <label for="Discharge_min_Threshold_voltage_time">Time Taken to reach Minimum Threshold - Discharge</label>
+                            <div></div>
+                              <input type="number" class="form-control" step="any" id="Discharge_min_Threshold_voltage_time" name="Discharge" placeholder="Discharge_min_Threshold_voltage_time : 4000-10000" min="4000" max='10000'  required="required"
+                              style="color:black; background-color:lightgrey" >
+                            </div>
+            
+                            <div class="form-group" >
+                              <label for="Charging_max_Threshold_voltage_time">Time Taken to reach Maximum Threshold - Charge</label>
+                              <input type="number" class="form-control" step="any" id="Charging_max_Threshold_voltage_time" name="Charge" placeholder="Charging_max_Threshold_voltage_time : 200-3000 " min="200" max="3000" required="required"
+                              style="color:black; background-color:lightgrey;" >
+                            </div>
+
+
+                            <p style="text-align:center;color: lightseagreen;">Battery Health - <b>99% </b>Accuracy</p>
+                            
+                             <p style="text-align:center;color: lightseagreen;">   Remaining Useful Life of battery - <b>89%</b> Accuracy
+                           
+                            </p>
+                            
+                        <button type="submit" class="btn btn-primary btn-block" style="outline:none;border:none">Predict</button>
+					</form>
+                        
+                        
+                    </div>
+
+
+
+
+
+
+                    <div role="tabpanel" class="tab-pane fade" id="Section3">
+                        
+
+                      <img style="
+                      float: right;
+                      width: 30%;
+                      margin-left: .75cm;
+                      margin-bottom: 1.5cm;
+                      
+  
+                      padding: 0em 1em 0em 0em;
+                    " src="{{url_for('static', filename='info1.jpg')}}" />
+
+
+
+
+                        <h4><B>About</B></h4>
+                        <p style="text-align: justify; padding: 5px 5px 5px 5px; opacity: 85%;">Among various approaches for implementing prognostic
+                            algorithms data-driven algorithms are popular in the
+                            industry due to their intuitive nature and relatively fast
+                            developmental cycle. However, no matter how easy it may
+                            seem, there are several pitfalls that one must watch out for
+                            while developing a data-driven prognostic algorithm. One
+                            such pitfall is the uncertainty inherent in the system. At each
+                            processing step uncertainties get compounded and can grow
+                            beyond control in predictions if not carefully managed
+                            during the various steps of the algorithms. This analysis from our preliminary development of data-
+                            driven algorithm for predicting end of discharge of Li-ion
+                            batteries using constant load experiment data and challenges
+                            faced when applying these algorithms to randomized
+                            variable loading profile as is the case in realistic
+                            applications. Lessons learned during the development phase
+                            are presented in dataset.  
+                            <h4><B>Model</B></h4>
+                            <p style="opacity: 85%;">Battery Health : Polynomial Regressor</p>
+                            <p style="opacity: 85%;">Remaining Useful Life of battery : SVR</p>
+                        </p>
+                        <div class="center" style="text-align:center ;">
+                            
+                        <a href="https://www.google.com"> <i style="font-size:36px;color:black" class="fa">&#xf09b;</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
